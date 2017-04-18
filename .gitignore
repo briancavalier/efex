@@ -1,0 +1,5 @@
+dist/*.js
+dist/*.map
+node_modules/
+experiments/
+.nyc_output/

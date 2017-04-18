@@ -1,0 +1,31 @@
+{
+  "name": "efex",
+  "version": "1.0.0",
+  "description": "Extensible effects",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "test": "npm run test:lint && npm run test:unit && npm run test:flow",
+    "test:lint": "standard src test",
+    "test:unit": "nyc mocha -r buba/register",
+    "test:flow": "flow check",
+    "prepublish": "npm run build"
+  },
+  "author": "brian@hovercraftstudios.com",
+  "license": "MIT",
+  "devDependencies": {
+    "buba": "^4.0.2",
+    "flow-bin": "^0.44.2",
+    "mocha": "^3.2.0",
+    "nyc": "^10.2.0",
+    "rollup": "^0.41.6",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-flow": "^1.1.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "standard": "^10.0.2"
+  },
+  "dependencies": {
+    "mersennetwister": "^0.2.3"
+  }
+}
